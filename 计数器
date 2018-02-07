@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计数器</title>
+	<style>
+		body{
+			counter-reset: c1 0;
+      注意：
+					1、不能将计数器声明在使用的元素中 
+		}
+		div{
+			counter-increment:c1 2;
+      注意：
+					1、哪个元素使用，就在哪个元素上声明增量
+		}
+		div:after{
+			content:">>第"counter(c1, upper-roman )"句";
+      注意：
+					配合着:before或:after一起使用
+          counter()函数接受两个参数，而且两参数之间用逗号(,)来分隔，第一个参数是计数器标识符，第二个参数设置计数器风格(可省略)
+		}
+	</style>
+</head>
+<body>
+	<div>锄禾日单位</div>
+	<div>锄禾日单位</div>
+	<div>锄禾日单位</div>
+	<div>锄禾日单位</div>
+	<div>锄禾日单位</div>
+</body>
+</html>
