@@ -1,0 +1,51 @@
+三种方法
+1，相对定位
+2，父元素设置overflow：hidden；
+3，第一个子元素设置display：table; content:""
+
+
+demo:
+
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			#d1,#d2{
+				width:200px;
+				height:200px;
+				background:red;
+				margin-bottom:-20px
+			}
+			#d2{
+				background:blue;
+				/*第一种方法*/
+				/*overflow: hidden;*/
+			}
+			#d3{
+				width:100px;
+				height:100px;
+				background:green;
+				margin-top:20px;
+			}
+			/*第二种方法*/
+			#d2:before{
+				content:"";
+				display:table;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<div id="d2">
+			<!--
+				1、第一个子元素
+				2、内容为空
+				3、table元素 : display:table
+			-->
+			<!-- <table></table> -->
+			<div id="d3"></div>
+		</div>
+	</body>
+</html>
