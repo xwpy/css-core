@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钟表</title>
+	<style>
+		img:hover{
+			transform: rotate(360deg);
+
+		}
+		#timea{
+			width:500px;
+			height:500px;
+			border-radius:50%; 
+			border:5px solid blue;
+			margin:0 auto;
+			position: relative;
+		}
+		#minute{
+			width: 190px;
+			height: 9px;
+			background-color: blue;
+			position: absolute;
+			left:250px;
+			top:250px;
+			/*改变元素基点，一般元素基点都是在元素中心位置*/
+			transform-origin: left top;
+			animation: duk 20s linear 200ms infinite reverse;
+		}
+		@keyframes duk{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform:rotate(360deg);
+			}
+		}
+		#second{
+			width: 150px;
+			height: 7px;
+			background-color: yellow;
+			transform-origin: left top;
+			position: absolute;
+			left:250px;
+			top:250px;
+		}
+	</style>
+</head>
+<body>
+	<img src="Images/star.jpg" alt="">
+	<div id="timea">
+	<div id="minute"></div>
+	<div id="second"></div>
+	</div>
+</body>
+</html>
