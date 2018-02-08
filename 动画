@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		#s1{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: blue;
+			animation-name:jack;
+			animation-duration:9s;
+			animation-timing-function: linear;
+			animation-delay:0s;
+			animation-iteration-count:infinite;
+			animation-direction:reverse;
+		}
+		#s1:hover{
+			animation-play-state:paused;
+		}
+		@keyframes jack{
+			0%{
+				left:0px;
+				top:0px;
+				background-color: blue;
+			}
+			25%{
+				left:0px;
+				top:200px;
+				background-color: red;
+			}
+			50%{
+				left:200px;
+				top:200px;
+				background-color: white;
+			}
+			75%{
+				left:200px;
+				top:0px;
+			}
+			100%{
+				left: 0px;
+				top:0px;
+				background-color: green;
+			}
+		}
+		@-moz-keyframes jack{
+			0%{
+				left:0px;
+				top:0px;
+				background-color: blue;
+			}
+			25%{
+				left:0px;
+				top:200px;
+				background-color: red;
+			}
+			50%{
+				left:200px;
+				top:200px;
+				background-color: white;
+			}
+			75%{
+				left:200px;
+				top:0px;
+			}
+			100%{
+				left: 0px;
+				top:0px;
+				background-color: green;
+			}
+		}
+		@-webkit-keyframes jack{
+			0%{
+				left:0px;
+				top:0px;
+				background-color: blue;
+			}
+			25%{
+				left:0px;
+				top:200px;
+				background-color: red;
+			}
+			50%{
+				left:200px;
+				top:200px;
+				background-color: white;
+			}
+			75%{
+				left:200px;
+				top:0px;
+			}
+			100%{
+				left: 0px;
+				top:0px;
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="s1"></div>
+</body>
+</html>
